@@ -56,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
 
         final double latitude = 37.8267;
         final double longitude = -122.423;
+        
+        // Your can enter your custom coordinates instead of mine.
 
         mRefreshImageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getForecast(double latitude, double longitude) {
-        String apiKey = "41db8bde58b6d9c75df0febc3fd218a0";
+        String apiKey = ""; // Enter YOUR OWN API Key from the forecast.io website
         String forecastUrl = "https://api.forecast.io/forecast/" + apiKey + "/" + latitude + "," + longitude;
 
         if (isNetworkAvailable()) {
